@@ -477,6 +477,65 @@ padding: 5px;
   font-size: calc("2vw + 1rem");
 }
 
+.submition-form-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: 80vw;
+  border-style: solid;
+  border-color: #bbb;
+  padding: 20px;
+}
+.fieldset-containers {
+  border-style: none;
+}
+.form-label {
+  font-size: 3vw;
+  color: white;
+}
+.form-input {
+  width: 100%;
+  border-radius: 10px;
+  border-style: solid;
+  border-color: #bbb;
+  height: 20px;
+  background-color: transparent; 
+  border-width: 1px;
+  color: whitesmoke;
+  text-align: center;
+
+}
+.message-input {
+  height: 30vh;
+}
+::placeholder {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: teal;
+}
+/* .submition-form-first-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+} */
+
+.thankyou-message {
+  height: 0;
+  overflow: hidden;
+  display: none;
+}
+
+.form-submit-btn {
+  width: 30vw;
+  background-color: #f05454;
+  color: white;
+  border-radius: 50px;
+  border-style: none;
+  font-size: 5vw;
+  align-self: flex-end;
+}
+
 @media only screen and (min-width: 1024px) {
   .background-wrapper {
     width: 30vw;
