@@ -24,84 +24,102 @@
       </nav>
       <div class="dropdown-contents">
         <button class="dropdown-btn-close" onclick="menuDisappear()">X</button>
-        <a href="#" class="dropdown-texts">Welcome</a>
-        <a href="#" class="dropdown-texts">Projects</a>
-        <a href="#" class="dropdown-texts">Skills</a>
-        <a href="#" class="dropdown-texts">About</a>
-        <a href="#" class="dropdown-texts">Contact</a>
+        <a href="#section-welcome" class="dropdown-texts" onclick="menuDisappear()">Welcome</a>
+        <a href="#section-projects" class="dropdown-texts" onclick="menuDisappear()">Projects</a>
+        <a href="#section-skills" class="dropdown-texts" onclick="menuDisappear()">Skills</a>
+        <a href="#section-about" class="dropdown-texts" onclick="menuDisappear()">About</a>
+        <a href="#section-contact" class="dropdown-texts" onclick="menuDisappear()">Contact</a>
       </div>
     </div>
     <nav class="navigation">
       <img src="images/logo.png" alt="" style="width: 6vh; margin-left: 2vw;">
-      <a href="#" class="nav-lists-welcome">Welcome</a>
-      <a href="#" class="nav-lists-about">Projects</a>
-      <a href="#" class="nav-lists-skills">Skills</a>
-      <a href="#" class="nav-lists-projects">About</a>
-      <a href="#" class="nav-lists-contact">Contact</a>
+      <a href="#section-welcome" class="nav-lists-welcome">Welcome</a>
+      <a href="#section-projects" class="nav-lists-projects">Projects</a>
+      <a href="#section-skills" class="nav-lists-skills">Skills</a>
+      <a href="#section-about" class="nav-lists-about">About</a>
+      <a href="#section-contact" class="nav-lists-contact">Contact</a>
     </nav>
     <div class="background-wrapper">
     <h1 class="name-box-lg">Jaehong Kim</h1>
       <div class="background-img"></div>
     </div>
-    <div class="objective">
+    <div class="objective" id="section-welcome">
     <h1 class="name-box-s" style="margin: 0">Jaehong Kim</h1>
       <div class="intro">
         <h1 class="title">I am</h1>
         <p class="intro-p">
-          Proficient with servers built on Linux and Windows systems 
-          as well as familiar working with AWS instances and docker containers.
+          seeking for an entry-level position within the Server/Devops engineer field
+          where I can fully employ my trained skills and expend my competence for the great success of both the company and myself.
+
         </p>
       </div>
     </div>
-    <hr class="section-divider">
-    <div class="section-container" id="section-projects">
+    <hr class="section-divider" id="section-projects">
+    <div class="section-container">
       <h1 class="title">Projects</h1>
       <div class="project-wrapper">
-        <h1 class="card-title-h1">Information System Security</h1>
+        <h1 class="card-title-h1">Business Infrastructure</h1>
         <div class="project-background-img" id="ict-bg-img"></div>
-        <button class="expander" id="ict-project" onclick="openExpender(this.id)">V Expand V</button>
         <div class="project-desc-box" id="ict-project-desc">
-          <h1>objective</h1>
+          <h1>Objective</h1>
           <p>Building business infrastructure from the scretch and testing Vulnerabilities</p>
-          <h1>Involing Skills</h1>
-          <p>Drawing topology including LAN, WAN, DMZ areas</p> 
-          <p>Building essential servers such as DNS, DHCP, CA, DB, VPN, WEB and monitoring server</p>
-          <p>Constructing routers and firewalls with NAT and ACL for safe networking</p>
-          <p>Setting up automatic DB backup using Bash script and crontab</p>
-          <p>Testing and finding solutions for web and system Vulnerabilities</p>
-          <div class="project-desc-btn">Explore More</div>
+          <h1>Overview</h1>
+          <li>Drawing topology including LAN, WAN, DMZ areas to design the infrastructure.</li> 
+          <br>
+          <li>Building essential servers such as DNS, DHCP, CA, DB, VPN, WEB and monitoring server</li>
+          <br>
+          <li>Constructing routers and firewalls with NAT and ACL for safe networking</li>
+          <br>
+          <li>Setting up automatic DB backup using Bash script and crontab</p>
+          <br>
+          <li>Testing and finding solutions for web and system Vulnerabilities</li>
+          <br>
+          <div class="project-desc-btn"><a href="https://www.google.com" target="_blank">View PPT</a></div>
         </div>
+        <button class="expander" id="ict-project" onclick="openExpender(this.id)">
+          <div class="expander-icons down-arrow arrow-left"></div>
+          <span class="expander-text">Expand</span>
+          <div class="expander-icons down-arrow arrow-right"></div>
+        </button>
       </div>
       <div class="project-wrapper">
         <h1 class="card-title-h1">Music Controller</h1>
         <div class="project-background-img" id="music-bg-img"></div>
-        <button class="expander" id="music-controller" onclick="openExpender(this.id)">V Expand V</button>
         <div class="project-desc-box" id="music-controller-desc">
-          <h1>objective</h1>
+          <h1>Objective</h1>
           <p>Building and deploying a web application built with django and react</p>
-          <h1>Involing Skills</h1>
-          <p>Building a web application with combination of diverse web framework and libraries such as djang and react</p> 
-          <p>Use of Spotify API for user authentication and music play feedback.</p>
-          <p>Deplying the web application using Docker containers and AWS EC2 instances.</p>
+          <h1>Overview</h1>
+          <li>Building a web application with combination of diverse web framework and libraries such as djang and react</li> 
+          <li>Use of Spotify API for user authentication and music play feedback.</li>
+          <li>Deplying the web application using Docker containers and AWS EC2 instances.</p>
           <div class="project-desc-btn">Explore More</div>
         </div>
+        <button class="expander" id="music-controller" onclick="openExpender(this.id)">
+          <div class="expander-icons down-arrow arrow-left"></div>
+          <span class="expander-text">Expand</span>
+          <div class="expander-icons down-arrow arrow-right"></div>
+        </button>
       </div>
       <div class="project-wrapper">
         <h1 class="card-title-h1">Web Profile</h1>
         <div class="project-background-img" id="web-profile-bg-img"></div>
-        <button class="expander" id="web-profile" onclick="openExpender(this.id)">V Expand V</button>
         <div class="project-desc-box" id="web-profile-desc">
-          <h1>objective</h1>
+          <h1>Objective</h1>
           <p>Creating a website for self-introduction and connection to other productions of mine</p>
-          <h1>Involing Skills</h1>
-          <p>Building a web portfolio using custom HTML, CSS and JavaScript</p> 
-          <p>Constructing NginX webserver container running on AWS EC2</p>
-          <p>Setting up domains for the accessibility to other portfolios.</p>
+          <h1>Overview</h1>
+          <li>Building a web portfolio using custom HTML, CSS and JavaScript</li> 
+          <li>Constructing NginX webserver container running on AWS EC2</p>
+          <li>Setting up domains for the accessibility to other portfolios.</p>
           <div class="project-desc-btn">Explore More</div>
         </div>
+        <button class="expander" id="web-profile" onclick="openExpender(this.id)">
+          <div class="expander-icons down-arrow arrow-left"></div>
+          <span class="expander-text">Expand</span>
+          <div class="expander-icons down-arrow arrow-right"></div>
+        </button>
       </div>
     </div>
-    <hr class="section-divider"> 
+    <hr class="section-divider" id="section-skills"> 
     <div class="section-container">
       <h1 class="title">Skills</h1>
       <span class="skills-sub-title">Highlights</span>
@@ -175,7 +193,7 @@
         <div class="outer-dock" id="lower-dock">
           <section class="inner-dock inner-dock-lower" id="coop">
             <div class="inner-dock-title">Cooperation</div>
-            <div class="inner-dock-desc">Experience in cooperative tools to boost up efficiency</div>
+            <div class="inner-dock-desc">Experiences in team projects using cooperative tools</div>
             <div class="icon-list">
               <div class="icons" id="slack"></div>
               <div class="icons" id="teamviewer"></div>
@@ -214,7 +232,7 @@
         <span class="dot dot-lower"></span>
       </div>
     </div>
-    <hr class="section-divider">
+    <hr class="section-divider" id="section-about">
     <div class="section-container">
       <h1 class="title">About Me</h1>
       <div class="aboutme-section">
@@ -223,31 +241,42 @@
           <div class="education-icons" id="willowWood"></div>
           <span class="education-years">2012 ~ 2016</span>
           <span class="education-names">WillowWood High School</span>
+          <span class="education-desc">Vice-President / ESL Representative President</span>
         </div>
         <div class="education-list">
           <div class="education-icons" id="queens"></div>
           <span class="education-years">2016 ~ 2017</span>
           <span class="education-names">Queen's University</span>
+          <span class="education-desc">Major : Sociology / Minor : Psychology</span>
         </div>
         <div class="education-list">
           <div class="education-icons" id="kgitbank"></div>
           <span class="education-years">2020~2021</span>
           <span class="education-names">KG ITBank Academy</span>
+          <span class="education-desc">Linux / Network / ICT Information System Security</span>
         </div>
         <h1 class="card-title-h1">Extracurricular Activities</h1>
         <div class="education-list">
           <div class="education-icons" id="kcca"></div>
           <span class="education-years">2014</span>
           <span class="education-names">Volunteer @ Korean Candian Cultural Association</span>
+          <span class="education-desc">Event Management Team Member</span>
+        </div>
+        <div class="education-list">
+          <div class="education-icons" id="redpath"></div>
+          <span class="education-years">2016</span>
+          <span class="education-names">Volunteer @ Redpath Waterfront Festival</span>
+          <span class="education-desc">Visitor Services Attendants</span>
         </div>
         <div class="education-list">
           <div class="education-icons" id="smalltalk"></div>
           <span class="education-years">2018 ~ 2019</span>
           <span class="education-names">Leader @ Small Talk: English Study Group</span>
+          <span class="education-desc">Leading Every Meeting with New Topics</span>
         </div>
       </div>
     </div>
-    <hr class="section-divider">
+    <hr class="section-divider" id="section-contact">
     <div class="section-container">
       <h1 class="title">Contact Me</h1>
         <form 
@@ -255,23 +284,17 @@
         method="POST"
         action="https://script.google.com/macros/s/AKfycbwOiHXn9E05lP0Yid4GH25d8oXdViYeEIQodePRf633GzOwv_FJeTxzIhB2zFKOFZoykQ/exec"
         >
-        <div class="submition-form-container">
-          <div class="submition-form-first-row">
-
+        <div class="submission-form-container">
           <fieldset class="fieldset-containers">
-            <!-- <label class="form-label" for="name">Name :</label> -->
             <input class="form-input" id="name" name="name" type="text" placeholder="Your Name">
           </fieldset>
           
           <fieldset class="fieldset-containers">
-            <!-- <label class="form-label" for="email">Email Address :</label> -->
             <input class="form-input" id="email" name="email" type="email" value=""
             required placeholder="example@email.com"/>
           </fieldset>
 
-          </div>
           <fieldset class="fieldset-containers">
-            <!-- <label class="form-label" for="message" style="color: white;">Message :</label> -->
             <input class="form-input message-input" id="message" name="message" type="text" placeholder="Your Message">
           </fieldset>
 
@@ -279,10 +302,9 @@
             <input class="form-input" id="honeypot" name="honeypot" type="text" placeholder="This is a honeypot. Please leave me blank :)"  value="" />
           </fieldset>
           <div class="thankyou-message">
-            <h2 style="color: white;">Submition Completed!</h2>
+            <h2>Submission Completed.<br> I Will get back to you <em>ASAP!</em></h2>
           </div>
-          <button class="form-submit-btn">
-            <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+          <button class="form-submit-btn">Send</button>
         </div>
       </form>
     </div>

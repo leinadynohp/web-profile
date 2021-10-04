@@ -10,6 +10,11 @@ html, body {
   font-family: 'Poppins', sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .section-divider {
   border-style: none;
   height: 2px;
@@ -190,7 +195,7 @@ padding: 5px;
 .project-desc-btn {
   position: relative;
   margin-top: 2vh;
-  margin-left: 60vw;
+  margin-left: 58vw;
   margin-bottom: 2vh;
   background-color: #f05454;
   height: auto;
@@ -199,15 +204,49 @@ padding: 5px;
 }
 
 .expander {
-  position: absolute;
+  position: relative;
   bottom: 0;
   background-color: teal;
   border-style: none;
   font-size: 2vw;
   padding: 0;
-  color: white;
   width: 100%;
   height: 3vh;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+.expander-icons {
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 50%;
+  height: 50%;
+  align-self: center;
+  justify-self: center;
+}
+
+.down-arrow {
+  background-image: url(images/down_arrow.png);
+}
+
+.arrow-left {
+  grid-column-start: 5;
+  grid-column-end: 6;
+}
+.arrow-right {
+  grid-column-start: 8;
+  grid-column-end: 9;
+}
+.expander-text {
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  align-self: center;
+
+  grid-column-start: 6;
+  grid-column-end: 8;
 }
 
 .card-title-h1 {
@@ -223,7 +262,7 @@ padding: 5px;
   height: 30vh;
 }
 #ict-bg-img {
-  background-image: url('images/ICT_Project.png');
+  background-image: url(images/ICT_Project.png);
 }
 #music-bg-img {
   background-image: url(images/MusicController.png);
@@ -247,7 +286,7 @@ padding: 5px;
 
 .skills-btn {
   position: relative;
-  height: 20vh;
+  height: 25vh;
   font-size: 5vw;
   font-weight: 900;
   background-color: #151515;
@@ -429,7 +468,7 @@ padding: 5px;
   grid-template-areas:
   "logos year"
   "logos name"
-  "desc desc"
+  "logos desc"
   ;
   margin: 2vh 0;
 }
@@ -455,6 +494,9 @@ padding: 5px;
 #kcca {
   background-image: url(images/kcca.png);
 }
+#redpath {
+  background-image: url(images/redpath.png);
+}
 #smalltalk {
   background-image: url(images/smalltalk.png);
 }
@@ -472,12 +514,11 @@ padding: 5px;
 }
 .education-desc {
   grid-area: desc;
-  height: 40vh;
   color: white;
-  font-size: calc("2vw + 1rem");
+  font-size: 1.5vw
 }
 
-.submition-form-container {
+.submission-form-container {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -485,6 +526,7 @@ padding: 5px;
   border-style: solid;
   border-color: #bbb;
   padding: 20px;
+  margin-bottom: 4vh;
 }
 .fieldset-containers {
   border-style: none;
@@ -498,7 +540,7 @@ padding: 5px;
   border-radius: 10px;
   border-style: solid;
   border-color: #bbb;
-  height: 20px;
+  height: 40px;
   background-color: transparent; 
   border-width: 1px;
   color: whitesmoke;
@@ -514,19 +556,19 @@ padding: 5px;
   text-align: center;
   color: teal;
 }
-/* .submition-form-first-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-} */
 
 .thankyou-message {
-  height: 0;
+  height: 0vh;
   overflow: hidden;
-  display: none;
+  display: block;
+  font-size: 2vw;
+  margin: 0;
+  color: white;
+  transition: 1s ease-in-out;
 }
 
 .form-submit-btn {
+  position: relative;
   width: 30vw;
   background-color: #f05454;
   color: white;
@@ -731,5 +773,22 @@ padding: 5px;
   }
   .education-names {
     font-size: calc(0.5vw + 1rem);
+  }
+  .education-desc {
+    font-size: calc(0.2vw + 1rem);
+  }
+
+  .submission-form-container {
+    width: 50vw;
+  }
+  .form-input {
+    font-size: calc(0.3vw + 10px);
+  }
+  .thankyou-message {
+    font-size: calc(0.3vw + 1rem);
+  }
+  .form-submit-btn {
+    font-size: calc(0.5vw + 1rem);
+    width: 7vw;
   }
 }

@@ -25,18 +25,25 @@ function menuDisappear() {
   $(".dropdown-contents").css("display", "none");
 }
 
-
 function openExpender(idName) {
   /* 
     expending the description section for each project.
     each description sections are distinguished by their ids. 
   */
+  var arrows = $("#" + idName).find(".expander-icons");
+  var texts = $("#" + idName).find(".expander-text");
   if ($("#" + idName + "-desc").css("height") === 0 +"px") {
-    $("#" + idName + "-desc").css("height", "calc(40vh + 2vh)")
-    $("#" + idName).html("^ Collapse ^")
+    $("#" + idName + "-desc").css("height", "calc(40vh + 2vh)");
+    texts.html("Collaps")
+    for (i=0; i < $(arrows).length; i++) {
+      $(arrows[i]).css("transform","rotate(180deg)")
+    }
   } else {
     $("#" + idName + "-desc").css("height", "0vh")
-    $("#" + idName).html("V Expand V")
+    texts.html("Expand")
+    for (i=0; i < $(arrows).length; i++) {
+      $(arrows[i]).css("transform","rotate(0deg)")
+    }
   }
 }
 
