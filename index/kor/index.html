@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/styles.css">
+  <title>Jaehong-Profile</title>
+</head>
+<body>
+  <div class="container">
+    <div class="navigation-small">
+      <nav class="navigation-s">
+        <img src="../../images/logo.png" alt="" style="width: 6vh; margin-left: 4vw;">
+        <button class="dropdown-btn-open" onclick="menuAppear()"></button>
+      </nav>
+      <div class="dropdown-contents">
+        <button class="dropdown-btn-close" onclick="menuDisappear()">X</button>
+        <a href="#section-welcome" class="dropdown-texts" onclick="menuDisappear()">처음으로</a>
+        <a href="#section-projects" class="dropdown-texts" onclick="menuDisappear()">프로젝트</a>
+        <a href="#section-skills" class="dropdown-texts" onclick="menuDisappear()">기술</a>
+        <a href="#section-about" class="dropdown-texts" onclick="menuDisappear()">소개</a>
+        <a href="#section-contact" class="dropdown-texts" onclick="menuDisappear()">이메일</a>
+        <div class="flex-box-row">
+          <a href="https://www.google.com"  target="__blank" class="dropdown-links-texts link-btn" onclick="menuDisappear()">이력서</a>
+          <a href="https://www.google.com"  target="__blank" class="dropdown-links-texts link-btn" onclick="menuDisappear()">깃허브</a>
+        </div>
+      </div>
+    </div>
+    <nav class="navigation">
+      <img src="../../images/logo.png" alt="" style="width: 6vh; margin-left: 2vw;">
+      <a href="#section-welcome" class="nav-lists-welcome">처음으로</a>
+      <a href="#section-projects" class="nav-lists-projects">프로젝트</a>
+      <a href="#section-skills" class="nav-lists-skills">기술</a>
+      <a href="#section-about" class="nav-lists-about">소개</a>
+      <a href="#section-contact" class="nav-lists-contact">이메일</a>
+    </nav>
+    <div class="background-wrapper">
+    <div class="background-wrapper-box">
+      <h1 class="name-box-lg">김 재 홍</h1>
+      <div class="flex-box-row link-box">
+        <a href="maintenance.html" target="__blank" class="link-btn">이력서</a>
+        <a href="maintenance.html" target="__blank" class="link-btn">깃허브</a>
+      </div>
+    </div>
+    
+      <div class="background-img"></div>
+    </div>
+    <div class="objective" id="section-welcome">
+    <h1 class="name-box-s" style="margin: 0">김 재 홍</h1>
+    <div class="">
+
+    </div>
+      <div class="intro">
+        <h1 class="title">안녕하세요!</h1>
+        <p class="intro-p">
+          DevOps 엔지니어로서 제가 공부한 지식과 기술을 적극, 활용하고 제 역량을 꾸준히 성장시키며 저와 기업이 같이 성장해 나아갈 수 있는 보금자리를 찾고 있습니다.
+        </p>
+      </div>
+    </div>
+    <hr class="section-divider" id="section-projects">
+    <div class="section-container">
+      <h1 class="title">프로젝트</h1>
+      <div class="project-wrapper">
+        <h1 class="card-title-h1">기업의 인프라 구축</h1>
+        <div class="project-background-img" id="ict-bg-img"></div>
+        <div class="project-desc-box" id="ict-project-desc">
+          <h1 class="project-desc-box-objective">개요</h1>
+          <p>기업의 인프라 구조를 이해하고 직접 설계 및 구축을 해보며 보안적인 문제점들을 보완할 보안 대책 강구</p>
+          <h1>요약</h1>
+          <ul class="project-desc-box-list">
+            <li>LAN, WAN, DMZ 영역을 고려하며 토폴로지 작성 및 계획 수립</li> 
+            <br>
+            <li>리눅스 환경의 가상 머신에서 DNS, DHCP, CA, DB, VPN, WEB 그리고 모니터링 서버 등 기본적인 서버를 구축</li>
+            <br>
+            <li>서버들 사이의 안전한 네트워크 통신을 위해 NAT와 ACL 기능을 탑재한 라우터와 방화벽을 구축하여 각 서버 연결</li>
+            <br>
+            <li>Bash 스크립트와 Crontab을 이용한 베이터베이스 백업 환경 구축</li>
+            <br>
+            <li>시스템, 웹 취약점 점검 후 문제점을 보완하고 안전한 기업 인프라 환경을 구축하기 위한 보안 대책 강구</li>
+            <br>
+          </ul>
+          <a href="maintenance.html" target="_blank" class="project-desc-btn">PPT 보기</a>
+        </div>
+        <button class="expander" id="ict-project" onclick="openExpender(this.id)">
+          <div class="expander-icons down-arrow arrow-left"></div>
+          <span class="expander-text">Expand</span>
+          <div class="expander-icons down-arrow arrow-right"></div>
+        </button>
+      </div>
+      <div class="project-wrapper">
+        <h1 class="card-title-h1">뮤직 컨트롤러</h1>
+        <div class="project-background-img" id="music-bg-img"></div>
+        <div class="project-desc-box" id="music-controller-desc">
+          <h1 class="project-desc-box-objective">개요</h1>
+          <p>개발부터 배포까지의 진행 과정 이해를 위한 Django와 React를 이용한 웹 애플리케이션 개발 및 AWS와 Docker를 활용한 배포</p>
+          <h1>요약</h1>
+          <ul class="project-desc-box-list">
+            <li>웹 프레임워크인 Djacgo와 React를 활용한 웹 애플리케이션 개발</li> 
+            <br>
+            <li>사용자 인증과 사용자의 음악 재생을 제어하기 위한 Spotify API를 활용</li>
+            <br>
+            <li>dockerfile과 docker-compose.yml 파일을 작성하여 Docker 컨테이너 환경에서 웹 애플리케이션을 리버스 프록시와 함께 실행하고 AWS EC2 인스턴스를 활용하여 배포</li>
+            <br>
+          </ul>
+          <a href="maintenance.html" target="_blank" class="project-desc-btn">더보기</a>
+          <a href="http://app.leinadynohp.site" target="_blank" class="project-desc-btn">사이트 방문</a>
+        </div>
+        <button class="expander" id="music-controller" onclick="openExpender(this.id)">
+          <div class="expander-icons down-arrow arrow-left"></div>
+          <span class="expander-text">Expand</span>
+          <div class="expander-icons down-arrow arrow-right"></div>
+        </button>
+      </div>
+      <div class="project-wrapper">
+        <h1 class="card-title-h1">웹 프로파일</h1>
+        <div class="project-background-img" id="web-profile-bg-img"></div>
+        <div class="project-desc-box" id="web-profile-desc">
+          <h1 class="project-desc-box-objective">개요</h1>
+          <p>나에 대한 정보에 쉽게 접근할 수 있는 웹사이트 개발 및 Nginx 리버스 프록시를 활용하여 여러 컨테이너 서버들 간의 요청 처리 기술 이해</p>
+          <h1>요약</h1>
+          <ul class="project-desc-box-list">
+            <li>HTLM, CSS, Javascript, 그리고 Jquery를 활용한 웹사이트 개발</li> 
+            <br>
+            <li>Nginx 컨테이너를 활용하여 리버스 프록시 서버 및 웹 서버를 구축하고 클라이언트의 요청을 알맞은 서버로 전송</li>
+            <br>
+            <li>AWS의 Route53을 활용하여 개인 도메인과 AWS EC2 인스턴스를 매핑하여 온라인상에 배포</li>
+            <br>
+            <li>웹사이트로 들어오는 요청에 대한 보안 강화를 위해 "letsencrypt"에서 발급받은 ssl 인증서를 통해 HTTPS 프로토콜 설정</li>
+          </ul>
+          <a href="maintenance.html" target="_blank" class="project-desc-btn">더보기</a>
+        </div>
+        <button class="expander" id="web-profile" onclick="openExpender(this.id)">
+          <div class="expander-icons down-arrow arrow-left"></div>
+          <span class="expander-text">Expand</span>
+          <div class="expander-icons down-arrow arrow-right"></div>
+        </button>
+      </div>
+    </div>
+    <hr class="section-divider" id="section-skills"> 
+    <div class="section-container">
+      <h1 class="title">기술</h1>
+      <span class="skills-sub-title">주요 기술</span>
+      <div class="skills-wrapper">
+        <button class="skills-btn prev-btn" id="prev-btn-upper" onclick="prevSkill(this.id)"> < </button>
+        <button class="skills-btn next-btn" id="next-btn-upper" onclick="nextSkill(this.id)"> > </button>
+        <div class="outer-dock" id="upper-dock">
+          <section class="inner-dock inner-dock-upper" id="os">
+            <div class="inner-dock-title">운영 체제</div>
+            <div class="inner-dock-desc">서버 구축 및 서버 운영</div>
+            <div class="icon-list">
+              <div class="icons" id="linux"></div>
+              <div class="icons" id="windows"></div>
+            </div>
+          </section>
+          <section class="inner-dock inner-dock-upper" id="networking">
+            <div class="inner-dock-title">네트워크</div>
+            <div class="inner-dock-desc">토폴로지 제작, 구축 및 활용</div>
+            <div class="icon-list">
+              <div class="icons" id="cisco"></div>
+              <div class="icons" id="gns"></div>
+            </div>
+          </section>
+          <section class="inner-dock inner-dock-upper" id="cloud">
+            <div class="inner-dock-title">클라우드</div>
+            <div class="inner-dock-desc">클라우드 솔루션을 활용한 유연한 작업</div>
+            <div class="icon-list">
+              <div class="icons" id="aws"></div>
+              <div class="icons" id="docker"></div>
+            </div>
+          </section>
+          <section class="inner-dock inner-dock-upper" id="security">
+            <div class="inner-dock-title">보안</div>
+            <div class="inner-dock-desc">방화벽과 보안 취약점에 대한 기본 이해 및 해결책 강구</div>
+            <div class="icon-list">
+              <div class="icons" id="firewall"></div>
+              <div class="icons" id="lock"></div>
+            </div>
+          </section>
+          <section class="inner-dock inner-dock-upper" id="languages">
+            <div class="inner-dock-title">프로그래밍 언어</div>
+            <div class="inner-dock-desc">코드 작성, 유지보수 및 활용 능력</div>
+            <div class="icon-list">
+              <div class="icons" id="bash"></div>
+              <div class="icons" id="python"></div>
+              <div class="icons" id="js"></div>
+            </div>
+          </section>
+          <section class="inner-dock inner-dock-upper" id="scm">
+            <div class="inner-dock-title">버전 관리</div>
+            <div class="inner-dock-desc">유연한 협업을 위한 버전 관리 도구 활용</div>
+            <div class="icon-list">
+              <div class="icons" id="git"></div>
+              <div class="icons" id="github"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="dot-wrapper" id="dot-wrapper-upper">
+        <span class="dot dot-upper dot-active"></span>
+        <span class="dot dot-upper"></span>
+        <span class="dot dot-upper"></span>
+        <span class="dot dot-upper"></span>
+        <span class="dot dot-upper"></span>
+        <span class="dot dot-upper"></span>
+      </div>
+      <span class="skills-sub-title">보조 기술</span>
+      <div class="skills-wrapper">
+        <button class="skills-btn prev-btn" id="prev-btn-lower" onclick="prevSkill(this.id)"> < </button>
+        <button class="skills-btn next-btn" id="next-btn-lower"onclick="nextSkill(this.id)"> > </button>
+        <div class="outer-dock" id="lower-dock">
+          <section class="inner-dock inner-dock-lower" id="coop">
+            <div class="inner-dock-title">협업</div>
+            <div class="inner-dock-desc">협업 도구를 활용하여 팀 프로젝트를 진행해 본 경험</div>
+            <div class="icon-list">
+              <div class="icons" id="slack"></div>
+              <div class="icons" id="teamviewer"></div>
+            </div>
+          </section>
+          <section class="inner-dock inner-dock-lower" id="natural-lang">
+            <div class="inner-dock-title">언어</div>
+            <div class="inner-dock-desc">유창한 한국어와 영어로 원활한 의사소통 가능</div>
+            <div class="icon-list">
+              <div class="icons" id="korea"></div>
+              <div class="icons" id="canada"></div>
+            </div>
+          </section>
+          <section class="inner-dock inner-dock-lower" id="documentation">
+            <div class="inner-dock-title">문서화</div>
+            <div class="inner-dock-desc">깔끔한 문서 작성과 시각적으로 돋보이는 PPT 작성 능력</div>
+            <div class="icon-list">
+              <div class="icons" id="word"></div>
+              <div class="icons" id="powerpoint"></div>
+              <div class="icons" id="excel"></div>
+            </div>
+          </section>
+          <section class="inner-dock inner-dock-lower" id="presentation">
+            <div class="inner-dock-title">프레젠테이션</div>
+            <div class="inner-dock-desc">다수의 무대 경험으로 원활한 프레젠테이션 진행</div>
+            <div class="icon-list">
+              <div class="icons" id="present"></div>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="dot-wrapper" id="dot-wrapper-lower">
+        <span class="dot dot-lower dot-active"></span>
+        <span class="dot dot-lower"></span>
+        <span class="dot dot-lower"></span>
+        <span class="dot dot-lower"></span>
+      </div>
+    </div>
+    <hr class="section-divider" id="section-about">
+    <div class="section-container">
+      <h1 class="title">소개</h1>
+      <div class="aboutme-section">
+        <h1 class="card-title-h1">학력</h1>
+        <div class="education-list">
+          <div class="education-icons" id="willowWood"></div>
+          <span class="education-years">2012 ~ 2016</span>
+          <span class="education-names">WillowWood High School</span>
+          <span class="education-desc">전교 부회장 / ESL 대표 회장</span>
+        </div>
+        <div class="education-list">
+          <div class="education-icons" id="queens"></div>
+          <span class="education-years">2016 ~ 2017 (휴학)</span>
+          <span class="education-names">Queen's University</span>
+          <span class="education-desc">전공 : 사회학 / 부전공 : 심리학</span>
+        </div>
+        <div class="education-list">
+          <div class="education-icons" id="kgitbank"></div>
+          <span class="education-years">2020~2021</span>
+          <span class="education-names">KG 아이티뱅크</span>
+          <span class="education-desc">리눅스 / 네트워크 / ICT 정보 시스템 보안 과정 수료</span>
+        </div>
+        <h1 class="card-title-h1">대외활동</h1>
+        <div class="education-list">
+          <div class="education-icons" id="kcca"></div>
+          <span class="education-years">2014</span>
+          <span class="education-names">봉사활동 @ Korean Candian Cultural Association</span>
+          <span class="education-desc">이벤트 기획 및 운영</span>
+        </div>
+        <div class="education-list">
+          <div class="education-icons" id="redpath"></div>
+          <span class="education-years">2016</span>
+          <span class="education-names">봉사활동 @ Redpath Waterfront Festival</span>
+          <span class="education-desc">방문자 가이드 및 도우미</span>
+        </div>
+        <div class="education-list">
+          <div class="education-icons" id="smalltalk"></div>
+          <span class="education-years">2018 ~ 2019</span>
+          <span class="education-names">모임장 @ Small Talk: English Study Group</span>
+          <span class="education-desc">영어 스터디 그룹 운영</span>
+        </div>
+      </div>
+    </div>
+    <hr class="section-divider" id="section-contact">
+    <div class="section-container">
+      <h1 class="title">이메일</h1>
+        <form 
+        class="gform"
+        method="POST"
+        action="https://script.google.com/macros/s/AKfycbwOiHXn9E05lP0Yid4GH25d8oXdViYeEIQodePRf633GzOwv_FJeTxzIhB2zFKOFZoykQ/exec"
+        >
+        <div class="submission-form-container">
+          <fieldset class="fieldset-containers">
+            <input class="form-input" id="name" name="name" type="text" placeholder="이름">
+          </fieldset>
+          
+          <fieldset class="fieldset-containers">
+            <input class="form-input" id="email" name="email" type="email" value=""
+            required placeholder="이메일@email.com"/>
+          </fieldset>
+
+          <fieldset class="fieldset-containers">
+            <input class="form-input message-input" id="message" name="message" type="text" placeholder="내용">
+          </fieldset>
+
+          <fieldset class="fieldset-containers">
+            <input class="form-input" id="honeypot" name="honeypot" type="text" placeholder="허니팟 입니다. 이 칸은 비워주세요! :)"  value="" />
+          </fieldset>
+          <div class="thankyou-message"></div>
+          <button class="form-submit-btn">보내기</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="../../main.js"></script>
+  <script src="../../submitHandler.js"></script>
+</body>
+</html>
