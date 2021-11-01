@@ -1,3 +1,3 @@
 # web-profile
 
-Web Resume Created by Leiand
+Web Resume Created by Leinad
