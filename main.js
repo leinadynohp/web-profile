@@ -18,11 +18,15 @@ $("body").scroll( () => {
 function menuAppear() {
   var topPosition = $("body").scrollTop();
   $(".dropdown-contents").css("top", topPosition + "px")
-  $(".dropdown-contents").css("display", "block");
+  $(".dropdown-contents").css("display", "flex");
+  if ($(".dropdown-contents").outerHeight() < $(window).height()) {
+    $(".dropdown-contents").css("height", "100vh");
+  } 
 }
 
 function menuDisappear() {
   $(".dropdown-contents").css("display", "none");
+  $(".dropdown-contents").css("height", "auto");
 }
 
 function openExpender(idName) {
@@ -33,13 +37,15 @@ function openExpender(idName) {
   var arrows = $("#" + idName).find(".expander-icons");
   var texts = $("#" + idName).find(".expander-text");
   if ($("#" + idName + "-desc").css("height") === 0 +"px") {
-    $("#" + idName + "-desc").css("height", "calc(40vh + 2vh)");
+    $("#" + idName + "-desc").css("height", "40vh");
+    $("#" + idName + "-desc").css("padding-bottom", "1vh");
     texts.html("Collaps")
     for (i=0; i < $(arrows).length; i++) {
       $(arrows[i]).css("transform","rotate(180deg)")
     }
   } else {
     $("#" + idName + "-desc").css("height", "0vh")
+    $("#" + idName + "-desc").css("padding-bottom", "0");
     texts.html("Expand")
     for (i=0; i < $(arrows).length; i++) {
       $(arrows[i]).css("transform","rotate(0deg)")

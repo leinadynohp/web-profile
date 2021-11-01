@@ -8,18 +8,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <title>Document</title>
+  <link rel="stylesheet" href="../../css/styles.css">
+  <title>Jaehong-Profile</title>
 </head>
 <body>
   <div class="container">
     <div class="navigation-small">
       <nav class="navigation-s">
-        <img src="images/logo.png" alt="" style="width: 6vh; margin-left: 4vw;">
+        <img src="../../images/logo.png" alt="" style="width: 6vh; margin-left: 4vw;">
         <button class="dropdown-btn-open" onclick="menuAppear()">
+          <!-- <hr class="dropdown-menu-hr">
           <hr class="dropdown-menu-hr">
-          <hr class="dropdown-menu-hr">
-          <hr class="dropdown-menu-hr">
+          <hr class="dropdown-menu-hr"> -->
         </button>
       </nav>
       <div class="dropdown-contents">
@@ -29,10 +29,14 @@
         <a href="#section-skills" class="dropdown-texts" onclick="menuDisappear()">Skills</a>
         <a href="#section-about" class="dropdown-texts" onclick="menuDisappear()">About</a>
         <a href="#section-contact" class="dropdown-texts" onclick="menuDisappear()">Contact</a>
+        <div class="flex-box-row">
+          <a href="https://www.google.com"  target="__blank" class="dropdown-links-texts" onclick="menuDisappear()">Resume</a>
+          <a href="https://www.google.com"  target="__blank" class="dropdown-links-texts" onclick="menuDisappear()">Github</a>
+        </div>
       </div>
     </div>
     <nav class="navigation">
-      <img src="images/logo.png" alt="" style="width: 6vh; margin-left: 2vw;">
+      <img src="../../images/logo.png" alt="" style="width: 6vh; margin-left: 2vw;">
       <a href="#section-welcome" class="nav-lists-welcome">Welcome</a>
       <a href="#section-projects" class="nav-lists-projects">Projects</a>
       <a href="#section-skills" class="nav-lists-skills">Skills</a>
@@ -40,7 +44,13 @@
       <a href="#section-contact" class="nav-lists-contact">Contact</a>
     </nav>
     <div class="background-wrapper">
-    <h1 class="name-box-lg">Jaehong Kim</h1>
+    <div class="background-wrapper-box">
+      <h1 class="name-box-lg">Jaehong Kim</h1>
+      <div class="flex-box-row link-box">
+        <a href="maintenance.html" target="__blank" class="link-btn">Resume</a>
+        <a href="maintenance.html" target="__blank" class="link-btn">Github</a>
+      </div>
+    </div>
       <div class="background-img"></div>
     </div>
     <div class="objective" id="section-welcome">
@@ -48,9 +58,8 @@
       <div class="intro">
         <h1 class="title">I am</h1>
         <p class="intro-p">
-          seeking for an entry-level position within the Server/Devops engineer field
-          where I can fully employ my trained skills and expend my competence for the great success of both the company and myself.
-
+          seeking for an entry-level position within the Devops engineer field
+          where I can fully employ my trained skills and expend my competence for the great success of both the company and myself
         </p>
       </div>
     </div>
@@ -61,20 +70,23 @@
         <h1 class="card-title-h1">Business Infrastructure</h1>
         <div class="project-background-img" id="ict-bg-img"></div>
         <div class="project-desc-box" id="ict-project-desc">
-          <h1>Objective</h1>
-          <p>Building business infrastructure from the scretch and testing Vulnerabilities</p>
+          <h1 class="project-desc-box-objective">Objective</h1>
+          <p>
+            Building business infrastructure from the scretch and testing vulnerabilities to understand how business infrastructure is built and managed</p>
           <h1>Overview</h1>
-          <li>Drawing topology including LAN, WAN, DMZ areas to design the infrastructure</li> 
-          <br>
-          <li>Building essential servers such as DNS, DHCP, CA, DB, VPN, WEB and monitoring server</li>
-          <br>
-          <li>Connecting each server by constructing routers and firewalls with NAT and ACL for safe networking</li>
-          <br>
-          <li>Securing database by setting up an automatic backup flow using Bash Script and crontab</li>
-          <br>
-          <li>Testing and finding solutions for web and system vulnerabilities to accomplish a secure infrastructure.</li>
-          <br>
-          <div class="project-desc-btn"><a href="https://www.google.com" target="_blank">View PPT</a></div>
+          <ul class="project-desc-box-list">
+            <li>Drawing topology including LAN, WAN, DMZ areas to design the infrastructure</li> 
+            <br>
+            <li>Building essential servers such as DNS, DHCP, CA, DB, VPN, WEB and monitoring server on virtual machines with Linux environment</li>
+            <br>
+            <li>Connecting each server by constructing routers and firewalls with NAT and ACL for safe networking</li>
+            <br>
+            <li>Securing database by setting up an automatic backup environment using Bash Script and crontab</li>
+            <br>
+            <li>Testing and finding solutions for web and system vulnerabilities to accomplish a secure infrastructure</li>
+            <br>
+          </ul>
+          <a href="maintenance.html" target="_blank" class="project-desc-btn">View PPT</a>
         </div>
         <button class="expander" id="ict-project" onclick="openExpender(this.id)">
           <div class="expander-icons down-arrow arrow-left"></div>
@@ -86,16 +98,29 @@
         <h1 class="card-title-h1">Music Controller</h1>
         <div class="project-background-img" id="music-bg-img"></div>
         <div class="project-desc-box" id="music-controller-desc">
-          <h1>Objective</h1>
-          <p>Building and deploying a web application built with django and react</p>
+          <h1 class="project-desc-box-objective">Objective</h1>
+          <p>
+            Building a web application built with Django and React as well as deploying through AWS 
+            and Docker to achieve a deeper understanding of developing and operating web application
+          </p>
           <h1>Overview</h1>
-          <li>Building a web application with combination of diverse web frameworks and libraries such as djang and react</li> 
-          <br>
-          <li>Use of Spotify API for user authentication and music play feedback.</li>
-          <br>
-          <li>Deplying the web application using Docker containers and AWS EC2 instances.</li>
-          <br>
-          <div class="project-desc-btn">Explore More</div>
+          <ul class="project-desc-box-list">
+            <li>
+              Building a web application with combination of diverse web frameworks and libraries such as djang and react
+            </li> 
+            <br>
+            <li>
+              Use of Spotify API for user authentication and music play feedback
+            </li>
+            <br>
+            <li>
+              Writing dockerfile and docker-compose.yml to create a container that runs 
+              the web application behind a reverse proxy server and deploying it using AWS EC2 instance
+            </li>
+            <br>
+          </ul>
+          <a href="maintenance.html" target="_blank" class="project-desc-btn">View Details</a>
+          <a href="http://app.leinadynohp.site" target="_blank" class="project-desc-btn">Visit Page</a>
         </div>
         <button class="expander" id="music-controller" onclick="openExpender(this.id)">
           <div class="expander-icons down-arrow arrow-left"></div>
@@ -107,16 +132,19 @@
         <h1 class="card-title-h1">Web Profile</h1>
         <div class="project-background-img" id="web-profile-bg-img"></div>
         <div class="project-desc-box" id="web-profile-desc">
-          <h1>Objective</h1>
-          <p>Creating a website for self-introduction and connection to other productions of mine</p>
+          <h1 class="project-desc-box-objective">Objective</h1>
+          <p>Creating a website to introduce myself and handling various requests to propriate servers using nginx reverse porxy technique</p>
           <h1>Overview</h1>
-          <li>Building a web portfolio using custom HTML, CSS and JavaScript with Jquery.</li> 
-          <br>
-          <li>Constructing NginX webserver container running on AWS EC2</li>
-          <br>
-          <li>Setting up domains for the accessibility to other portfolios.</li>
-          <br>
-          <div class="project-desc-btn">Explore More</div>
+          <ul class="project-desc-box-list">
+            <li>Building a web portfolio using custom HTML, CSS and JavaScript with Jquery.</li> 
+            <br>
+            <li>Constructing nginx reverse proxy server and web servers using docker containers and handling requests though reverse proxy server</li>
+            <br>
+            <li>Use of Route53 to map between AWS EC2 instance and personal domain to achieve online hosting</li>
+            <br>
+            <li>Securing connections to the website using HTTPS protocol with "letsencrypt" ssl certificate.</li>
+          </ul>
+          <a href="maintenance.html" target="_blank" class="project-desc-btn">View Details</a>
         </div>
         <button class="expander" id="web-profile" onclick="openExpender(this.id)">
           <div class="expander-icons down-arrow arrow-left"></div>
@@ -278,7 +306,7 @@
           <div class="education-icons" id="smalltalk"></div>
           <span class="education-years">2018 ~ 2019</span>
           <span class="education-names">Leader @ Small Talk: English Study Group</span>
-          <span class="education-desc">Leading Every Meeting with New Topics</span>
+          <span class="education-desc">Leading English Study Group</span>
         </div>
       </div>
     </div>
@@ -307,9 +335,7 @@
           <fieldset class="fieldset-containers">
             <input class="form-input" id="honeypot" name="honeypot" type="text" placeholder="This is a honeypot. Please leave me blank :)"  value="" />
           </fieldset>
-          <div class="thankyou-message">
-            <h2>Submission Completed.<br> I Will get back to you <em>ASAP!</em></h2>
-          </div>
+          <div class="thankyou-message"></div>
           <button class="form-submit-btn">Send</button>
         </div>
       </form>
@@ -317,7 +343,7 @@
   </div>
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="main.js"></script>
-  <script src="submitHandler.js"></script>
+  <script src="../../main.js"></script>
+  <script src="../../submitHandler.js"></script>
 </body>
 </html>

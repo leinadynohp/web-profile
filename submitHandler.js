@@ -58,12 +58,13 @@
     var form = event.target;
     var formData = getFormData(form);
     var data = formData.data;
-
+    var thankYouMessage = form.querySelector(".thankyou-message");
     // If a honeypot field is filled, assume it was done so by a spam bot.
     if (formData.honeypot) {
-      document.querySelector(".thankyou-message").innerHTML = "<h2>Submission Imcompleted.<br>Please Leave the Honeypot <em>BLANK!</em></h2>"
-      document.querySelector(".thankyou-message").style.display = "block"
-      document.querySelector(".thankyou-message").style.height ="10vh"
+      thankYouMessage.innerHTML = "Submission Imcompleted.<br>Please Leave the Honeypot <em>BLANK!</em>"
+      thankYouMessage.style.display = "block"
+      thankYouMessage.style.height ="10vh"
+      thankYouMessage.style.padding ="5vh"
       return false;
     }
 
@@ -80,11 +81,11 @@
         if (formElements) {
           formElements.style.display = "none"; // hide form
         }
-        var thankYouMessage = form.querySelector(".thankyou-message");
         if (thankYouMessage) {
-          thankYouMessage.innerHTML = "<h2>Submission Completed.<br> I Will get back to you <em>ASAP!</em></h2>"
+          thankYouMessage.innerHTML = "Submission Completed.<br> I Will get back to you <em>ASAP!</em>"
           thankYouMessage.style.display = "block";
           thankYouMessage.style.height  = "10vh";
+          thankYouMessage.style.padding = "5vh";
         }
       }
     };

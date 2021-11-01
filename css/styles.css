@@ -29,7 +29,7 @@ a {
   height: 40vh;
 }
 .background-img {
-  background-image: url('images/Layer\ 22\ copy.png');
+  background-image: url(../images/background-pic.png);
   background-size: cover;
   top: 0;
   left: 0;
@@ -74,6 +74,11 @@ padding: 5px;
   right: 0;
   margin-left: auto;
   margin-right: 4vw;
+  border-style: none;
+
+  background-image: url(../images/menu-bars.png);
+  background-position: center center;
+  background-size: cover;
 }
 
 .dropdown-menu-hr {
@@ -84,12 +89,15 @@ padding: 5px;
 .dropdown-contents {
   background-color: black;
   position: absolute;
-  top: 131px;
-  height: 100vh;
+  height: auto;
   width: 100%;
   z-index: 999;
   opacity: 0.9;
   display: none;
+  padding-bottom: 5vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   transition: ease-in-out;
 }
 
@@ -112,8 +120,24 @@ padding: 5px;
   display: block;
   text-align: center;
   padding-top: 10%;
-  font-size: 50px;
+  font-size: 8vw;
 }
+
+.flex-box-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.dropdown-links-texts {
+  font-size: 5vw;
+  margin: 0 2vw;
+  padding-top: 4vh;
+  color: #f05454;
+  font-weight: 600;
+  border-bottom: 1px solid;
+  border-color: white;
+}
+
 /* Objective */
 .objective {
   display: flex;
@@ -135,13 +159,15 @@ padding: 5px;
   color: white;
   font-size: 7vw;
 }
+.background-wrapper-box {
+  display: none;
+}
 .name-box-lg {
   display: none;
 }
 .intro {
   height: 100%;
   text-align: center;
-  padding: 0 20vw;
 }
 
 .intro-h1 {
@@ -153,6 +179,9 @@ padding: 5px;
   font-size: 4vw;
   margin-bottom: 0;
   color: white;
+  width: 75vw; 
+  text-align: justify;
+  word-break: keep-all;
 }
 /* Projects */
 .section-container {
@@ -179,13 +208,19 @@ padding: 5px;
 
 .project-desc-box {
   background-color: transparent;
-  width: 100%;
+  width: 78vw;
   transition: height 1s ease-in-out;
   color: white;
   text-align: left;
   font-size: 2.5vw;
   overflow-x: hidden;
   overflow-y: scroll;
+  word-break: keep-all;
+  padding-right: 2vw;
+}
+
+.project-desc-box-list {
+  padding-left: 5vw;
 }
 
 #ict-project-desc, #music-controller-desc, #web-profile-desc {
@@ -195,12 +230,13 @@ padding: 5px;
 .project-desc-btn {
   position: relative;
   margin-top: 2vh;
-  margin-left: 58vw;
   margin-bottom: 2vh;
   background-color: #f05454;
   height: auto;
-  width: 20vw;
+  padding: 0 5vw;
   text-align: center;
+  text-decoration: none;
+  color: white;
 }
 
 .expander {
@@ -211,7 +247,7 @@ padding: 5px;
   font-size: 2vw;
   padding: 0;
   width: 100%;
-  height: 3vh;
+  height: 4vw;
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -228,7 +264,7 @@ padding: 5px;
 }
 
 .down-arrow {
-  background-image: url(images/down_arrow.png);
+  background-image: url(../images/down_arrow.png);
 }
 
 .arrow-left {
@@ -262,13 +298,13 @@ padding: 5px;
   height: 30vh;
 }
 #ict-bg-img {
-  background-image: url(images/ICT_Project.png);
+  background-image: url(../images/ICT_Project.png);
 }
 #music-bg-img {
-  background-image: url(images/MusicController.png);
+  background-image: url(../images/MusicController.png);
 }
 #web-profile-bg-img {
-  background-image:  url(images/web_Profile.png);
+  background-image:  url(../images/web_Profile.png);
 }
 
 .skills-sub-title {
@@ -358,7 +394,7 @@ padding: 5px;
   font-weight: 600;
 }
 .inner-dock-desc {
-  color: teal;
+  color: rgb(21, 173, 173);
   font-size: 3vw;
   margin-bottom: 2vh;
 }
@@ -395,67 +431,67 @@ padding: 5px;
 }
 
 #linux {
-  background-image: url(images/Linux-cut.png)
+  background-image: url(../images/Linux-cut.png)
 }
 #windows {
-  background-image: url(images/windows-cut.png);
+  background-image: url(../images/windows-cut.png);
 }
 #cisco {
-  background-image: url(images/cisco-cut.png)
+  background-image: url(../images/cisco-cut.png)
 }
 #gns {
-  background-image: url(images/gns-3-cu.png);
+  background-image: url(../images/gns-3-cu.png);
 }
 #docker {
-  background-image: url(images/docker-cut.png);
+  background-image: url(../images/docker-cut.png);
 }
 #aws {
-  background-image: url(images/aws-cut.png);
+  background-image: url(../images/aws-cut.png);
 }
 #firewall {
-  background-image: url(images/firewall-cut.png);
+  background-image: url(../images/firewall-cut.png);
 }
 #lock {
-  background-image: url(images/security-cut.png);
+  background-image: url(../images/security-cut.png);
 }
 #bash {
-  background-image: url(images/bash-cut-1.png);
+  background-image: url(../images/bash-cut-1.png);
 }
 #python {
-  background-image: url(images/python-cut.png);
+  background-image: url(../images/python-cut.png);
 }
 #js {
-  background-image: url(images/js-cut.png);
+  background-image: url(../images/js-cut.png);
 }
 #git {
-  background-image: url(images/git-cut.png);
+  background-image: url(../images/git-cut.png);
 }
 #github {
-  background-image: url(images/github-cut.png);
+  background-image: url(../images/github-cut.png);
 }
 #slack {
-  background-image: url(images/slack-cut.png);
+  background-image: url(../images/slack-cut.png);
 }
 #teamviewer {
-  background-image: url(images/teamviewer-cut.png);
+  background-image: url(../images/teamviewer-cut.png);
 }
 #korea {
-  background-image: url(images/korea-flag.png);
+  background-image: url(../images/korea-flag.png);
 }
 #canada {
-  background-image: url(images/canada-flag.png);
+  background-image: url(../images/canada-flag.png);
 }
 #word {
-  background-image: url(images/word-cut.png);
+  background-image: url(../images/word-cut.png);
 }
 #powerpoint {
-  background-image: url(images/pp-cut.png);
+  background-image: url(../images/pp-cut.png);
 }
 #excel {
-  background-image: url(images/excel-cut.png);
+  background-image: url(../images/excel-cut.png);
 }
 #present {
-  background-image: url(images/presentation-cut.png);
+  background-image: url(../images/presentation-cut.png);
 }
 .aboutme-section {
   display: flex;
@@ -483,25 +519,25 @@ padding: 5px;
   margin-right: 2vw;
 }
 #willowWood {
-  background-image: url(images/willowWood-cut.png);
+  background-image: url(../images/willowWood-cut.png);
 }
 #queens {
-  background-image: url(images/Queens-cut.png);
+  background-image: url(../images/Queens-cut.png);
 }
 #kgitbank {
-  background-image: url(images/kg-cut.png);
+  background-image: url(../images/kg-cut.png);
 }
 #kcca {
-  background-image: url(images/kcca.png);
+  background-image: url(../images/kcca.png);
 }
 #redpath {
-  background-image: url(images/redpath.png);
+  background-image: url(../images/redpath.png);
 }
 #smalltalk {
-  background-image: url(images/smalltalk.png);
+  background-image: url(../images/smalltalk.png);
 }
 .education-years {
-  color: teal;
+  color: rgb(21, 173, 173);
   grid-area: year;
   font-size: 2vw;
   align-self:flex-end;
@@ -515,7 +551,7 @@ padding: 5px;
 .education-desc {
   grid-area: desc;
   color: white;
-  font-size: 1.5vw
+  font-size: 1.8vw
 }
 
 .submission-form-container {
@@ -554,7 +590,7 @@ padding: 5px;
   font-family: 'Noto Sans KR', sans-serif;
   font-family: 'Poppins', sans-serif;
   text-align: center;
-  color: teal;
+  color: rgb(21, 173, 173);
 }
 
 .thankyou-message {
@@ -594,7 +630,7 @@ padding: 5px;
     z-index: 999;
     position: fixed;
     width: 100vw;
-    height: 4vh;
+    height: 5vh;
     font-size: calc(0.2vw + 1rem);
     display: flex;
     flex-wrap: nowrap;
@@ -622,9 +658,17 @@ padding: 5px;
   .name-box-s {
     display: none;
   }
-  .name-box-lg {
+  .background-wrapper-box {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     top: 5vh;
+    width: 100%;
+
+  }
+  .name-box-lg {
+    position: relative;
     font-size: 2vw;
     text-align: center;
     display: block;
@@ -633,12 +677,33 @@ padding: 5px;
     color: white;
     z-index: 2;
   }
+  .link-box {
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+  }
+  .link-btn {
+    position: relative;
+    margin: 0 2vw;
+    background-color: #f05454;
+    height: auto;
+    padding: 0 1vw;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+
+    border-bottom: 2px solid;
+    border-color: white;
+  }
   .title {
     font-size: calc(2vw + 1rem);
   }
   .intro-p {
     font-size: calc(0.5vw + 1rem);
-    width: 35vw;
+    width: 55vw;
   }
   .section-divider {
     width: 60vw;
@@ -680,7 +745,7 @@ padding: 5px;
     grid-row-end: 3;
   }
   .project-desc-box {
-    width: 20vw;
+    width: 25vw;
     font-size: calc(0.05vw + 13px);
     height: 40vh;
     grid-column-start: 2;
@@ -688,13 +753,21 @@ padding: 5px;
     grid-row-start: 2;
     grid-row-end: 3;
     padding-left: 3vw;
+    padding-right: 2vw;
   }
+  .project-desc-box-list {
+    padding-left: 2vw;
+  }
+  .project-desc-box-objective {
+    margin-top: 0;
+  }
+
   #ict-project-desc, #music-controller-desc, #web-profile-desc{
     height: 40vh;
   }
   .project-desc-btn {
-    margin: 0%;
-    width: 10vw;
+    margin: 0;
+    padding: 0 3vw;
   }
 
   .skills-wrapper {
