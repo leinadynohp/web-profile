@@ -19,32 +19,32 @@
         <button class="dropdown-btn-open" onclick="menuAppear()"></button>
       </nav>
       <div class="dropdown-contents">
-        <button class="dropdown-btn-close" onclick="menuDisappear()">X</button>
-        <a href="#section-welcome" class="dropdown-texts" onclick="menuDisappear()">처음으로</a>
-        <a href="#section-projects" class="dropdown-texts" onclick="menuDisappear()">프로젝트</a>
-        <a href="#section-skills" class="dropdown-texts" onclick="menuDisappear()">기술</a>
-        <a href="#section-about" class="dropdown-texts" onclick="menuDisappear()">소개</a>
-        <a href="#section-contact" class="dropdown-texts" onclick="menuDisappear()">이메일</a>
+        <button id="close-btn" class="dropdown-btn-close" onclick="menuDisappear(this.id)">X</button>
+        <a id="welcome-s" class="dropdown-texts" onclick="menuDisappear(this.id)">처음으로</a>
+        <a id="projects-s" class="dropdown-texts" onclick="menuDisappear(this.id)">프로젝트</a>
+        <a id="skills-s" class="dropdown-texts" onclick="menuDisappear(this.id)">기술</a>
+        <a id="about-s" class="dropdown-texts" onclick="menuDisappear(this.id)">소개</a>
+        <a id="contact-s" class="dropdown-texts" onclick="menuDisappear(this.id)">이메일</a>
         <div class="flex-box-row">
-          <a href="https://www.google.com"  target="__blank" class="dropdown-links-texts link-btn" onclick="menuDisappear()">이력서</a>
-          <a href="https://www.google.com"  target="__blank" class="dropdown-links-texts link-btn" onclick="menuDisappear()">깃허브</a>
+          <a id="resume-link" href="/downloads/Jaehong_Kim_Resume(DevOps).pdf" download class="dropdown-links-texts link-btn" onclick="menuDisappear(this.id)">이력서</a>
+          <a id="github-link" href="https://github.com/leinadynohp"  target="__blank" class="dropdown-links-texts link-btn" onclick="menuDisappear(this.id)">깃허브</a>
         </div>
       </div>
     </div>
     <nav class="navigation">
       <img src="../../images/logo.png" alt="" style="width: 6vh; margin-left: 2vw;">
-      <a href="#section-welcome" class="nav-lists-welcome">처음으로</a>
-      <a href="#section-projects" class="nav-lists-projects">프로젝트</a>
-      <a href="#section-skills" class="nav-lists-skills">기술</a>
-      <a href="#section-about" class="nav-lists-about">소개</a>
-      <a href="#section-contact" class="nav-lists-contact">이메일</a>
+      <a id="welcome" class="nav-lists-welcome" onclick="scrollToElement(this.id)">처음으로</a>
+      <a id="projects" class="nav-lists-projects" onclick="scrollToElement(this.id)">프로젝트</a>
+      <a id="skills" class="nav-lists-skills" onclick="scrollToElement(this.id)">기술</a>
+      <a id="about" class="nav-lists-about" onclick="scrollToElement(this.id)">소개</a>
+      <a id="contact" class="nav-lists-contact" onclick="scrollToElement(this.id)">이메일</a>
     </nav>
     <div class="background-wrapper">
     <div class="background-wrapper-box">
       <h1 class="name-box-lg">김 재 홍</h1>
       <div class="flex-box-row link-box">
-        <a href="maintenance.html" target="__blank" class="link-btn">이력서</a>
-        <a href="maintenance.html" target="__blank" class="link-btn">깃허브</a>
+        <a href="/downloads/Jaehong_Kim_Resume(DevOps).pdf" download class="link-btn">이력서</a>
+        <a href="https://github.com/leinadynohp" target="__blank" class="link-btn">깃허브</a>
       </div>
     </div>
     
@@ -84,7 +84,7 @@
             <li>시스템, 웹 취약점 점검 후 문제점을 보완하고 안전한 기업 인프라 환경을 구축하기 위한 보안 대책 강구</li>
             <br>
           </ul>
-          <a href="maintenance.html" target="_blank" class="project-desc-btn">PPT 보기</a>
+          <a href="/downloads/Jaehong_Kim_Portfolio_#1.zip" download class="project-desc-btn">PPT 다운로드</a>
         </div>
         <button class="expander" id="ict-project" onclick="openExpender(this.id)">
           <div class="expander-icons down-arrow arrow-left"></div>
@@ -107,8 +107,8 @@
             <li>dockerfile과 docker-compose.yml 파일을 작성하여 Docker 컨테이너 환경에서 웹 애플리케이션을 리버스 프록시와 함께 실행하고 AWS EC2 인스턴스를 활용하여 배포</li>
             <br>
           </ul>
-          <a href="maintenance.html" target="_blank" class="project-desc-btn">더보기</a>
-          <a href="http://app.leinadynohp.site" target="_blank" class="project-desc-btn">사이트 방문</a>
+          <a href="https://leinadscabin.tistory.com/category/Projects/Music%20Controller%20%EB%B0%B0%ED%8F%AC" target="_blank" class="project-desc-btn">더보기</a>
+          <a href="https://app.leinadynohp.site" target="_blank" class="project-desc-btn">사이트 방문</a>
         </div>
         <button class="expander" id="music-controller" onclick="openExpender(this.id)">
           <div class="expander-icons down-arrow arrow-left"></div>
@@ -132,7 +132,7 @@
             <br>
             <li>웹사이트로 들어오는 요청에 대한 보안 강화를 위해 "letsencrypt"에서 발급받은 ssl 인증서를 통해 HTTPS 프로토콜 설정</li>
           </ul>
-          <a href="maintenance.html" target="_blank" class="project-desc-btn">더보기</a>
+          <a href="https://leinadscabin.tistory.com/category/Projects/Web%20Profile" target="_blank" class="project-desc-btn">더보기</a>
         </div>
         <button class="expander" id="web-profile" onclick="openExpender(this.id)">
           <div class="expander-icons down-arrow arrow-left"></div>
@@ -170,7 +170,24 @@
             <div class="inner-dock-desc">클라우드 솔루션을 활용한 유연한 작업</div>
             <div class="icon-list">
               <div class="icons" id="aws"></div>
+              <div class="icons" id="route53"></div>
+            </div>
+          </section>
+          <section class="inner-dock inner-dock-upper" id="virtual">
+            <div class="inner-dock-title">가상화</div>
+            <div class="inner-dock-desc">가상환경 구축 및 활용</div>
+            <div class="icon-list">
               <div class="icons" id="docker"></div>
+              <div class="icons" id="docker-compose"></div>
+              <div class="icons" id="vmware"></div>
+            </div>
+          </section>
+          <section class="inner-dock inner-dock-upper" id="db">
+            <div class="inner-dock-title">데이터베이스</div>
+            <div class="inner-dock-desc">기본 SQL문 작성 및 데이터베이스 설정</div>
+            <div class="icon-list">
+              <div class="icons" id="mariadb"></div>
+              <div class="icons" id="mysql"></div>
             </div>
           </section>
           <section class="inner-dock inner-dock-upper" id="security">
@@ -202,6 +219,8 @@
       </div>
       <div class="dot-wrapper" id="dot-wrapper-upper">
         <span class="dot dot-upper dot-active"></span>
+        <span class="dot dot-upper"></span>
+        <span class="dot dot-upper"></span>
         <span class="dot dot-upper"></span>
         <span class="dot dot-upper"></span>
         <span class="dot dot-upper"></span>

@@ -23,32 +23,32 @@
         </button>
       </nav>
       <div class="dropdown-contents">
-        <button class="dropdown-btn-close" onclick="menuDisappear()">X</button>
-        <a href="#section-welcome" class="dropdown-texts" onclick="menuDisappear()">Welcome</a>
-        <a href="#section-projects" class="dropdown-texts" onclick="menuDisappear()">Projects</a>
-        <a href="#section-skills" class="dropdown-texts" onclick="menuDisappear()">Skills</a>
-        <a href="#section-about" class="dropdown-texts" onclick="menuDisappear()">About</a>
-        <a href="#section-contact" class="dropdown-texts" onclick="menuDisappear()">Contact</a>
+        <button id="close-btn" class="dropdown-btn-close" onclick="menuDisappear(this.id)">X</button>
+        <a id="welcome-s" class="dropdown-texts" onclick="menuDisappear(this.id)">Welcome</a>
+        <a id="projects-s" class="dropdown-texts" onclick="menuDisappear(this.id)">Projects</a>
+        <a id="skills-s" class="dropdown-texts" onclick="menuDisappear(this.id)">Skills</a>
+        <a id="about-s" class="dropdown-texts" onclick="menuDisappear(this.id)">About</a>
+        <a id="contact-s" class="dropdown-texts" onclick="menuDisappear(this.id)">Contact</a>
         <div class="flex-box-row">
-          <a href="https://www.google.com"  target="__blank" class="dropdown-links-texts" onclick="menuDisappear()">Resume</a>
-          <a href="https://www.google.com"  target="__blank" class="dropdown-links-texts" onclick="menuDisappear()">Github</a>
+          <a id="resume-link" href="/downloads/Jaehong_Kim_Resume(DevOps).pdf"  download class="dropdown-links-texts" onclick="menuDisappear(this.id)">Resume</a>
+          <a id="github-link" href="https://github.com/leinadynohp"  target="__blank" class="dropdown-links-texts" onclick="menuDisappear(this.id)">Github</a>
         </div>
       </div>
     </div>
     <nav class="navigation">
       <img src="../../images/logo.png" alt="" style="width: 6vh; margin-left: 2vw;">
-      <a href="#section-welcome" class="nav-lists-welcome">Welcome</a>
-      <a href="#section-projects" class="nav-lists-projects">Projects</a>
-      <a href="#section-skills" class="nav-lists-skills">Skills</a>
-      <a href="#section-about" class="nav-lists-about">About</a>
-      <a href="#section-contact" class="nav-lists-contact">Contact</a>
+      <a id="welcome" class="nav-lists-welcome" onclick="scrollToElement(this.id)">Welcome</a>
+      <a id="projects" class="nav-lists-projects" onclick="scrollToElement(this.id)">Projects</a>
+      <a id="skills" class="nav-lists-skills" onclick="scrollToElement(this.id)">Skills</a>
+      <a id="about" class="nav-lists-about" onclick="scrollToElement(this.id)">About</a>
+      <a id="contact" class="nav-lists-contact" onclick="scrollToElement(this.id)">Contact</a>
     </nav>
     <div class="background-wrapper">
     <div class="background-wrapper-box">
       <h1 class="name-box-lg">Jaehong Kim</h1>
       <div class="flex-box-row link-box">
-        <a href="maintenance.html" target="__blank" class="link-btn">Resume</a>
-        <a href="maintenance.html" target="__blank" class="link-btn">Github</a>
+        <a href="/downloads/Jaehong_Kim_Resume(DevOps).pdf" download class="link-btn">Resume</a>
+        <a href="https://github.com/leinadynohp" target="__blank" class="link-btn">Github</a>
       </div>
     </div>
       <div class="background-img"></div>
@@ -86,7 +86,7 @@
             <li>Testing and finding solutions for web and system vulnerabilities to accomplish a secure infrastructure</li>
             <br>
           </ul>
-          <a href="maintenance.html" target="_blank" class="project-desc-btn">View PPT</a>
+          <a href="/downloads/Jaehong_Kim_Portfolio_Infra.zip" download class="project-desc-btn">Download PPT</a>
         </div>
         <button class="expander" id="ict-project" onclick="openExpender(this.id)">
           <div class="expander-icons down-arrow arrow-left"></div>
@@ -119,8 +119,8 @@
             </li>
             <br>
           </ul>
-          <a href="maintenance.html" target="_blank" class="project-desc-btn">View Details</a>
-          <a href="http://app.leinadynohp.site" target="_blank" class="project-desc-btn">Visit Page</a>
+          <a href="https://leinadscabin.tistory.com/category/Projects/Music%20Controller%20%EB%B0%B0%ED%8F%AC" target="_blank" class="project-desc-btn">Blog Post</a>
+          <a href="https://app.leinadynohp.site" target="_blank" class="project-desc-btn">Visit Page</a>
         </div>
         <button class="expander" id="music-controller" onclick="openExpender(this.id)">
           <div class="expander-icons down-arrow arrow-left"></div>
@@ -144,7 +144,7 @@
             <br>
             <li>Securing connections to the website using HTTPS protocol with "letsencrypt" ssl certificate.</li>
           </ul>
-          <a href="maintenance.html" target="_blank" class="project-desc-btn">View Details</a>
+          <a href="https://leinadscabin.tistory.com/category/Projects/Web%20Profile" target="_blank" class="project-desc-btn">Blog Post</a>
         </div>
         <button class="expander" id="web-profile" onclick="openExpender(this.id)">
           <div class="expander-icons down-arrow arrow-left"></div>
@@ -182,7 +182,23 @@
             <div class="inner-dock-desc">Working with Cloud Solutions</div>
             <div class="icon-list">
               <div class="icons" id="aws"></div>
+              <div class="icons" id="route53"></div>
+            </div>
+          </section>
+          <section class="inner-dock inner-dock-upper" id="virtual">
+            <div class="inner-dock-title">Virtualization</div>
+            <div class="inner-dock-desc">Working with Virtual Solutions</div>
+            <div class="icon-list">
               <div class="icons" id="docker"></div>
+              <div class="icons" id="vmware"></div>
+            </div>
+          </section>
+          <section class="inner-dock inner-dock-upper" id="db">
+            <div class="inner-dock-title">Database</div>
+            <div class="inner-dock-desc">Basic SQL for DB Configuration</div>
+            <div class="icon-list">
+              <div class="icons" id="mariadb"></div>
+              <div class="icons" id="mysql"></div>
             </div>
           </section>
           <section class="inner-dock inner-dock-upper" id="security">
@@ -202,7 +218,7 @@
               <div class="icons" id="js"></div>
             </div>
           </section>
-          <section class="inner-dock inner-dock-upper" id="scm">
+          <section class="inner-dock inner-dock-upper" id="version-controll">
             <div class="inner-dock-title">Version Control</div>
             <div class="inner-dock-desc">Flexibility when working in a team</div>
             <div class="icon-list">
@@ -214,6 +230,8 @@
       </div>
       <div class="dot-wrapper" id="dot-wrapper-upper">
         <span class="dot dot-upper dot-active"></span>
+        <span class="dot dot-upper"></span>
+        <span class="dot dot-upper"></span>
         <span class="dot dot-upper"></span>
         <span class="dot dot-upper"></span>
         <span class="dot dot-upper"></span>

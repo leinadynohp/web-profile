@@ -14,6 +14,17 @@ $("body").scroll( () => {
   }
 });
 
+function scrollToElement(idName) {
+  const filter = ["welcome", "projects", "skills", "about", "contact"]
+
+  if (filter.includes(idName)) {
+    $("#" + "section-" + idName)[0].scrollIntoView(
+      {behavior:'smooth'}
+    );
+  } else {
+    return false;
+  }
+};
 
 function menuAppear() {
   var topPosition = $("body").scrollTop();
@@ -22,12 +33,14 @@ function menuAppear() {
   if ($(".dropdown-contents").outerHeight() < $(window).height()) {
     $(".dropdown-contents").css("height", "100vh");
   } 
-}
+};
 
-function menuDisappear() {
+function menuDisappear(idName) {
+  var elementId = idName.split("-")[0]
+  scrollToElement(elementId);
   $(".dropdown-contents").css("display", "none");
   $(".dropdown-contents").css("height", "auto");
-}
+};
 
 function openExpender(idName) {
   /* 
@@ -108,7 +121,6 @@ function nextSkill(idName) {
     if (firstIndex > $(".inner-dock-upper").length) {
       firstIndex = 1
     } 
-    console.log (idName, firstIndex)
     moveOuterDock(idName, firstIndex)
     activeDot(idName, firstIndex)
   } else if (idName === "next-btn-lower") {
@@ -116,7 +128,6 @@ function nextSkill(idName) {
     if (secondIndex > $(".inner-dock-lower").length) {
       secondIndex = 1
     }
-    console.log (idName, secondIndex)
     moveOuterDock(idName, secondIndex)
     activeDot(idName, secondIndex)
   } else {
@@ -134,7 +145,6 @@ function prevSkill(idName) {
     if (firstIndex < 1 ) {
       firstIndex = $(".inner-dock-upper").length
     }
-    console.log (idName, firstIndex)
     moveOuterDock(idName, firstIndex)
     activeDot(idName, firstIndex)
   } else if (idName === "prev-btn-lower") {
@@ -142,7 +152,6 @@ function prevSkill(idName) {
     if (secondIndex < 1) {
       secondIndex = $(".inner-dock-lower").length
     }
-    console.log (idName, secondIndex)
     moveOuterDock(idName, secondIndex)
     activeDot(idName, secondIndex)
   }

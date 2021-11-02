@@ -356,7 +356,7 @@ padding: 5px;
   grid-column-end: 3;
 }
 #upper-dock {
-  width: 420vw;
+  width: 560vw;
 }
 #lower-dock {
   width: 280vw;
@@ -442,11 +442,26 @@ padding: 5px;
 #gns {
   background-image: url(../images/gns-3-cu.png);
 }
+#aws {
+  background-image: url(../images/aws-cut.png);
+}
+#route53 {
+  background-image: url(../images/route53.png)
+}
 #docker {
   background-image: url(../images/docker-cut.png);
 }
-#aws {
-  background-image: url(../images/aws-cut.png);
+#docker-compose {
+  background-image: url(../images/docker-compose.png);
+}
+#vmware {
+  background-image: url(../images/vmware.png);
+}
+#mariadb {
+  background-image: url(../images/mariadb.png);
+}
+#mysql {
+  background-image: url(../images/mysql.png);
 }
 #firewall {
   background-image: url(../images/firewall-cut.png);
@@ -783,7 +798,8 @@ padding: 5px;
     grid-template-areas: 
     "a b" 
     "c d"
-    "e f";
+    "e f"
+    "g h";
     align-items: center;
   }
   #upper-dock {
@@ -807,17 +823,24 @@ padding: 5px;
   #cloud, #documentation {
     grid-area: c;
   }
-  #security, #presentation{
+  #virtual, #presentation {
     grid-area: d;
   }
-  #languages {
+  #db {
     grid-area: e;
-    padding-bottom: 4vh;
   }
-  #scm {
+  #security {
     grid-area: f;
+  }
+  #languages {
+    grid-area: g;
     padding-bottom: 4vh;
   }
+  #version-controll {
+    grid-area: h;
+    padding-bottom: 4vh;
+  }
+
 
   .inner-dock-title {
     font-size: calc(0.5vw + 1rem);
