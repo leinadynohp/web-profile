@@ -656,8 +656,8 @@ padding: 5px;
   [class^="nav-lists-"] {
     color: white;
     text-decoration: none;
-    padding: calc(2vw + 1rem);
     width: 100%;
+    cursor: pointer;
   }
 
   .navigation-s {
